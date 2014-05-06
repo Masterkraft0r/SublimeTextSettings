@@ -4,244 +4,56 @@
   // ---------------------------------------------------------------------------
 
   {
-    "caption": "SublimeText: Move left one char",
-    "keys": ["alt+j"],
-    "command": "move",
-    "args":
-    {
-      "by": "characters",
-      "forward": false
-    }
-  },
-  {
-    "caption": "SublimeText: Extend selection left one char",
-    "keys": ["alt+shift+j"],
-    "command": "move",
-    "args":
-    {
-      "by": "characters",
-      "forward": false,
-      "extend": true
-    }
-  },
-  {
-    "caption": "SublimeText: Move right one char",
-    "keys": ["alt+l"],
-    "command": "move",
-    "args":
-    {
-      "by": "characters",
-      "forward": true
-    }
-  },
-  {
-    "caption": "SublimeText: Extend selection right one char",
-    "keys": ["alt+shift+l"],
-    "command": "move",
-    "args":
-    {
-      "by": "characters",
-      "forward": true,
-      "extend": true
-    }
-  },
-  {
-    "caption": "SublimeText: Move up one line",
-    "keys": ["alt+i"],
-    "command": "move",
-    "args":
-    {
-      "by": "lines",
-      "forward": false
-    }
-  },
-  {
-    "caption": "SublimeText: Extend selection up one line",
-    "keys": ["alt+shift+i"],
-    "command": "move",
-    "args":
-    {
-      "by": "lines",
-      "forward": false,
-      "extend": true
-    }
-  },
-  {
-    "caption": "SublimeText: Move down one line",
-    "keys": ["alt+k"],
-    "command": "move",
-    "args":
-    {
-      "by": "lines",
-      "forward": true
-    }
-  },
-  {
-    "caption": "SublimeText: Extend selection down one line",
-    "keys": ["alt+shift+k"],
-    "command": "move",
-    "args":
-    {
-      "by": "lines",
-      "forward": true,
-      "extend": true
-    }
-  },
-  {
-    "caption": "SublimeText: Move left one word",
-    "keys": ["alt+n"],
-    "command": "move",
-    "args":
-    {
-        "by": "subwords",
-        "forward": false
-    }
-  },
-  {
-    "caption": "SublimeText: Extend selection left one word",
-    "keys": ["alt+shift+n"],
-    "command": "move",
-    "args":
-    {
-        "by": "subwords",
-        "forward": false,
-        "extend": true
-    }
-  },
-  {
-    "caption": "SublimeText: Move right one word",
-    "keys": ["alt+."],
-    "command": "move",
-    "args":
-    {
-      "by": "subwords",
-      "forward": true
-    }
-  },
-  {
-    "caption": "SublimeText: Extend selection right one word",
-    "keys": ["alt+shift+."],
-    "command": "move",
-    "args":
-    {
-      "by": "subwords",
-      "forward": true,
-      "extend": true
-    }
-  },
-  {
-    "caption": "SublimeText: Move cursor to beginning of line",
-    "keys": ["alt+u"],
-    "command": "move_to",
-    "args":
-    {
-      "to": "bol",
-      "extend": false
-    }
-  },
-  {
-    "caption": "SublimeText: Extend selection to beginning of line",
-    "keys": ["alt+shift+u"],
-    "command": "move_to",
-    "args":
-    {
-      "to": "bol",
-      "extend": true
-    }
-  },
-  {
-    "caption": "SublimeText: Move cursor to end of line",
-    "keys": ["alt+o"],
-    "command": "move_to",
-    "args":
-    {
-      "to": "eol",
-      "extend": false
-    }
-  },
-  {
-    "caption": "SublimeText: Extend selection to end of line",
-    "keys": ["alt+shift+o"],
-    "command": "move_to",
-    "args":
-    {
-      "to": "eol",
-      "extend": true
-    }
-  },
-  {
     "caption": "SublimeText: Extend selection to current line",
-    "keys": ["alt+f", "alt+l"],
+    "keys": ["super+l"],
     "command": "expand_selection",
-    "args":
-    {
-      "to": "line"
-    }
+    "args": {"to": "line"}
   },
   {
     "caption": "SublimeText: Extend selection to current scope",
-    "keys": ["alt+f", "alt+s"],
+    "keys": ["super+s"],
     "command": "expand_selection",
-    "args":
-    {
-      "to": "scope"
-    }
+    "args": {"to": "scope"}
   },
   {
     "caption": "SublimeText: Extend selection to current brackets",
-    "keys": ["alt+f", "alt+b"],
+    "keys": ["super+b"],
     "command": "expand_selection",
-    "args":
-    {
-      "to": "brackets"
-    }
+    "args": {"to": "brackets"}
   },
   {
     "caption": "SublimeText: Extend selection to current indentation block",
-    "keys": ["alt+f", "alt+i"],
+    "keys": ["super+i"],
     "command": "expand_selection",
-    "args":
-    {
-      "to": "indentation"
-    }
+    "args": {"to": "indentation"}
   },
   {
     "caption": "SublimeText: Extend selection to current word",
-    "keys": ["alt+f", "alt+w"],
+    "keys": ["super+w"],
     "command": "expand_selection",
-    "args":
-    {
-      "to": "word"
-    }
+    "args": {"to": "word"}
   },
   {
     "caption": "SublimeText: Toggle sublime text console",
-    "keys": ["super+c"],
+    "keys": ["alt+s", "alt+c"],
     "command": "show_panel",
-    "args":
-    {
-      "panel": "console",
-      "toggle": true
-    }
+    "args": {"panel": "console", "toggle": true}
   },
   {
     "caption": "SublimeText: Toggle side bar",
-    "keys": ["super+y"],
+    "keys": ["alt+s", "alt+s"],
     "command": "toggle_side_bar"
   },
   {
     "caption": "SublimeText: Toggle minimap",
-    "keys": ["super+c"],
+    "keys": ["alt+s", "alt+m"],
     "command": "toggle_minimap"
   },
   {
-    "caption": "SublimeText: Toggle console",
-    "keys": ["alt+s"],
+    "caption": "SublimeText: Toggle comment",
+    "keys": ["alt+c"],
     "command": "toggle_comment",
-    "args":
-    {
-      "block": false
-    }
+    "args": {"block": false}
   },
 
   // ---------------------------------------------------------------------------
@@ -282,10 +94,7 @@
     "caption": "BracketHighlighter: Search to end of file for closing bracket",
     "keys": ["alt+b", "alt+b"],
     "command": "bh_key",
-    "args":
-    {
-      "lines" : true
-    }
+    "args": {"lines" : true}
   },
   {
     "caption": "BracketHighlighter: Remove brackets",
@@ -296,16 +105,9 @@
     "caption": "BracketHighlighter: Go to left bracket",
     "keys": ["alt+b", "alt+u"],
     "command": "bh_key",
-    "args":
-    {
-      "lines" : true,
-      "plugin":
-      {
-        "type": ["__all__"],
-        "command": "bh_modules.bracketselect",
-        "args": {"select": "left"}
-      }
-    }
+    "args": {"lines": true, "plugin": {"type": ["__all__"],
+                                       "command": "bh_modules.bracketselect",
+                                       "args": {"select": "left"}}}
   },
   {
     "caption": "BracketHighlighter: Go to right bracket",
@@ -739,7 +541,7 @@
     }
   },
   {
-    "caption": "SublimeREPL: Open Python 2 shell in REPL",
+    "caption": "SublimeREPL: Open Python shell in REPL",
     "keys": ["alt+r", "alt+p", "alt+p"],
     "command": "run_existing_window_command",
     "args":
@@ -749,8 +551,8 @@
     }
   },
   {
-    "caption": "SublimeREPL: Run current file in Python 2 shell in REPL",
-    "keys": ["alt+r", "alt+p", "alt+r", "alt+2"],
+    "caption": "SublimeREPL: Run current file in Python shell in REPL",
+    "keys": ["alt+r", "alt+p", "alt+r"],
     "command": "run_existing_window_command", "args":
     {
       "id": "repl_python_run",
