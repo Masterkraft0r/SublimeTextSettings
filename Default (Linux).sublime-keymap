@@ -7,56 +7,37 @@
     "caption": "SublimeText: Extend selection to current line",
     "keys": ["super+l"],
     "command": "expand_selection",
-    "args":
-    {
-      "to": "line"
-    }
+    "args": {"to": "line"}
   },
   {
     "caption": "SublimeText: Extend selection to current scope",
     "keys": ["super+s"],
     "command": "expand_selection",
-    "args":
-    {
-      "to": "scope"
-    }
+    "args": {"to": "scope"}
   },
   {
     "caption": "SublimeText: Extend selection to current brackets",
     "keys": ["super+b"],
     "command": "expand_selection",
-    "args":
-    {
-      "to": "brackets"
-    }
+    "args": {"to": "brackets"}
   },
   {
     "caption": "SublimeText: Extend selection to current indentation block",
     "keys": ["super+i"],
     "command": "expand_selection",
-    "args":
-    {
-      "to": "indentation"
-    }
+    "args": {"to": "indentation"}
   },
   {
     "caption": "SublimeText: Extend selection to current word",
     "keys": ["super+w"],
     "command": "expand_selection",
-    "args":
-    {
-      "to": "word"
-    }
+    "args": {"to": "word"}
   },
   {
     "caption": "SublimeText: Toggle sublime text console",
     "keys": ["alt+s", "alt+c"],
     "command": "show_panel",
-    "args":
-    {
-      "panel": "console",
-      "toggle": true
-    }
+    "args": {"panel": "console", "toggle": true}
   },
   {
     "caption": "SublimeText: Toggle side bar",
@@ -72,10 +53,7 @@
     "caption": "SublimeText: Toggle comment",
     "keys": ["alt+c"],
     "command": "toggle_comment",
-    "args":
-    {
-      "block": false
-    }
+    "args": {"block": false}
   },
 
   // ---------------------------------------------------------------------------
@@ -116,10 +94,7 @@
     "caption": "BracketHighlighter: Search to end of file for closing bracket",
     "keys": ["alt+b", "alt+b"],
     "command": "bh_key",
-    "args":
-    {
-      "lines" : true
-    }
+    "args": {"lines" : true}
   },
   {
     "caption": "BracketHighlighter: Remove brackets",
@@ -130,16 +105,9 @@
     "caption": "BracketHighlighter: Go to left bracket",
     "keys": ["alt+b", "alt+u"],
     "command": "bh_key",
-    "args":
-    {
-      "lines" : true,
-      "plugin":
-      {
-        "type": ["__all__"],
-        "command": "bh_modules.bracketselect",
-        "args": {"select": "left"}
-      }
-    }
+    "args": {"lines": true, "plugin": {"type": ["__all__"],
+                                       "command": "bh_modules.bracketselect",
+                                       "args": {"select": "left"}}}
   },
   {
     "caption": "BracketHighlighter: Go to right bracket",
