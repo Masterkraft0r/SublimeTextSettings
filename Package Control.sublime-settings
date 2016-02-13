@@ -1,13 +1,16 @@
 {
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
 	"installed_packages":
 	[
-		"AAAPackageDev",
 		"Dayle Rees Color Schemes",
-		"GitHub Flavored Markdown Preview",
+		"Filter Lines",
 		"Hammer Color Scheme",
-		"HexViewer",
-		"LaTeXTools",
 		"Oblivion Color Scheme",
+		"Package Control",
+		"PackageDev",
 		"Schemr",
 		"SideBarEnhancements",
 		"Solarized Color Scheme",

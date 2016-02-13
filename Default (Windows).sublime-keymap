@@ -3,6 +3,7 @@
   // -- SublimeText2 --
   // ---------------------------------------------------------------------------
 
+  // -- Selection --
   {
     "caption": "SublimeText: Extend selection to current line",
     "keys": ["super+l"],
@@ -82,359 +83,43 @@
   },
 
   // ---------------------------------------------------------------------------
-  // -- BracketHighlighter --
+  // -- Filter Lines --
   // ---------------------------------------------------------------------------
 
   {
-    "caption": "BracketHighlighter: Toggle global enable",
-    "keys": ["alt+b", "alt+e"],
-    "command": "bh_toggle_enable"
-  },
-  {
-    "caption": "BracketHighlighter: Search to end of file for closing bracket",
-    "keys": ["alt+b", "alt+b"],
-    "command": "bh_key",
-    "args": {"lines" : true}
-  },
-  {
-    "caption": "BracketHighlighter: Remove brackets",
-    "keys": ["alt+b", "alt+r"],
-    "command": "bh_remove_brackets"
-  },
-  {
-    "caption": "BracketHighlighter: Go to left bracket",
-    "keys": ["alt+b", "alt+u"],
-    "command": "bh_key",
-    "args": {"lines": true, "plugin": {"type": ["__all__"],
-                                       "command": "bh_modules.bracketselect",
-                                       "args": {"select": "left"}}}
-  },
-  {
-    "caption": "BracketHighlighter: Go to right bracket",
-    "keys": ["alt+b", "alt+o"],
-    "command": "bh_key",
-    "args":
-    {
-      "lines" : true,
-      "plugin":
-      {
-        "type": ["__all__"],
-        "command": "bh_modules.bracketselect",
-        "args": {"select": "right"}
-      }
-    }
-  },
-  {
-    "caption": "BracketHighlighter: Select tag name of HTML/XML tag (both opening name and closing)",
-    "keys": ["alt+b", "alt+t"],
-    "command": "bh_key",
-    "args":
-    {
-      "plugin":
-      {
-        "type": ["cfml", "html", "angle"],
-        "command": "bh_modules.tagnameselect"
-      }
-    }
-  },
-  {
-    "caption": "BracketHighlighter: Convert single quote string to double quoted string and vice versa",
-    "keys": ["alt+b", "alt+q"],
-    "command": "bh_key",
-    "args":
-    {
-      "lines" : true,
-      "plugin":
-      {
-        "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"],
-        "command": "bh_modules.swapquotes"
-      }
-    }
-  },
-  {
-    "caption": "BracketHighlighter: Fold contents between brackets",
-    "keys": ["alt+b", "alt+f"],
-    "command": "bh_key",
-    "args":
-    {
-      "plugin":
-      {
-        "type": ["__all__"],
-        "command" : "bh_modules.foldbracket"
-      }
-    }
-  },
-  {
-    "caption": "BracketHighlighter: Swap brackets with another type",
-    "keys": ["alt+b", "alt+s"],
-    "command": "swap_brackets"
-  },
-  {
-    "caption": "BracketHighlighter: Surround selection with brackets from quick panel",
-    "keys": ["alt+b", "alt+b"],
-    "command": "wrap_brackets"
-  },
-  {
-    "caption": "BracketHighlighter: Toggle high visibility mode",
-    "keys": ["alt+b", "alt+v"],
-    "command": "bh_toggle_high_visibility"
-  },
-
-  // ---------------------------------------------------------------------------
-  // -- FilterLines --
-  // ---------------------------------------------------------------------------
-
-  {
-    "caption": "FilterLines: Search for a regex in lines of current file",
-    "keys": ["ctrl+l", "ctrl+r"],
-    "command": "filter_to_lines",
+    "caption": "Filter Lines: Filter With Regex",
+    "keys": ["alt+g", "alt+r"],
+    "command": "prompt_filter_to_lines",
     "args":
     {
       "search_type": "regex"
     }
   },
   {
-    "caption": "FilterLines: Search for a string in lines of current file",
-    "keys": ["ctrl+l", "ctrl+s"],
-    "command": "filter_to_lines",
+    "caption": "Filter Lines: Filter With String",
+    "keys": ["alt+g", "alt+s"],
+    "command": "prompt_filter_to_lines",
     "args":
     {
       "search_type": "string"
     }
   },
-
-  // ---------------------------------------------------------------------------
-  // -- Goto Documentation --
-  // ---------------------------------------------------------------------------
-
   {
-    "caption": "Goto documentation",
-    "keys": ["alt+d"],
-    "command": "goto_documentation"
-  },
-
-  // ---------------------------------------------------------------------------
-  // -- LaTeXing --
-  // ---------------------------------------------------------------------------
-
-  // ---------------------------------------------------------------------------
-  // -- LaTeXTools --
-  // ---------------------------------------------------------------------------
-
-  // ---------------------------------------------------------------------------
-  // -- Markdown Preview --
-  // ---------------------------------------------------------------------------
-
-  {
-    "caption": "Markdown Preview",
-    "keys": ["alt+m"],
-    "command": "markdown_preview",
+    "caption": "Filter Lines: Fold With Regex",
+    "keys": ["alt+f", "alt+r"],
+    "command": "prompt_fold_to_lines",
     "args":
     {
-      "target": "browser",
-      "parser":"markdown"
-    }
-  },
-
-  // ---------------------------------------------------------------------------
-  // -- QuickRef --
-  // ---------------------------------------------------------------------------
-
-  {
-    "caption": "QuickRef: Toggle QuickRef",
-    "keys": ["alt+q"],
-    "command": "quick_ref",
-    "args":
-    {
-      "regular_run_mode": true
+      "search_type": "regex"
     }
   },
   {
-    "caption": "QuickRef: Toggle QuickRef (Edit Favourites)",
-    "keys": ["alt+shift+q"],
-    "command": "quick_ref"
-  },
-
-  // ---------------------------------------------------------------------------
-  // -- Search Stackoverflow --
-  // ---------------------------------------------------------------------------
-
-  {
-    "caption": "Stackoverflow: Search Selection",
-    "keys": ["alt+s"],
-    "command": "stackoverflow_search_selection",
-    "context":
-    [
-      {
-        "key": "selection_empty",
-        "operator": "equal",
-        "operand": false
-      }
-    ]
-  },
-  {
-    "caption": "Stackoverflow: Search from Input",
-    "keys": ["alt+s"],
-    "command": "stackoverflow_search_from_input",
-    "context":
-    [
-      {
-        "key": "selection_empty",
-        "operator": "equal",
-        "operand": true
-      }
-    ]
-  },
-
-  // ---------------------------------------------------------------------------
-  // -- SendText --
-  // ---------------------------------------------------------------------------
-
-  {
-    "caption": "SendText: Send current line/selection to terminal",
-    "keys": ["alt+enter"],
-    "command": "send_selection"
-  },
-
-  // ---------------------------------------------------------------------------
-  // -- SublimeCodeIntel --
-  // ---------------------------------------------------------------------------
-
-  {
-    "caption": "SublimeCodeIntel: Show autocomplete",
-    "keys": ["ctrl+space"],
-    "command": "code_intel_auto_complete"
-  },
-  {
-    "caption": "SublimeCodeIntel: Go to Python definition",
-    "keys": ["alt+e", "alt+g"],
-    "command": "goto_python_definition"
-  },
-  {
-    "caption": "SublimeCodeIntel: Back to Python definition",
-    "keys": ["alt+e", "alt+b"],
-    "command": "back_to_python_definition"
-  },
-
-  // ---------------------------------------------------------------------------
-  // -- SublimeHaskell --
-  // ---------------------------------------------------------------------------
-
-  {
-    "caption": "SublimeHaskell: Go to declaration",
-    "keys": ["alt+h", "alt+d"],
-    "command": "sublime_haskell_go_to_declaration",
-    "context":
-    [
-      {
-        "key": "is_haskell_source"
-      }
-    ]
-  },
-  {
-    "caption": "SublimeHaskell: Show type",
-    "keys": ["alt+h", "alt+t"],
-    "command": "sublime_haskell_show_type",
-    "context":
-    [
-      {
-        "key" : "is_haskell_source"
-      }
-    ]
-  },
-  {
-    "caption": "SublimeHaskell: Insert type",
-    "keys": ["alt+h", "alt+i"],
-    "command": "sublime_haskell_insert_type",
-    "context":
-    [
-      {
-        "key" : "is_haskell_source"
-      }
-    ]
-  },
-  {
-    "caption": "SublimeHaskell: Symbol Info",
-    "keys": ["alt+h", "alt+s"],
-    "command": "sublime_haskell_symbol_info",
-    "context":
-    [
-      {
-        "key" : "is_haskell_source"
-      }
-    ]
-  },
-  {
-    "caption": "SublimeHaskell: Show autocomplete",
-    "keys": ["."],
-    "command": "sublime_haskell_complete",
+    "caption": "Filter Lines: Fold With String",
+    "keys": ["alt+f", "alt+s"],
+    "command": "prompt_fold_to_lines",
     "args":
     {
-      "characters": "."
-    },
-    "context":
-    [
-      {
-        "key": "is_haskell_source"
-      },
-      {
-        "key": "auto_completion_popup"
-      },
-      {
-        "key": "is_module_completion"
-      }
-    ]
-  },
-  {
-    "caption": "SublimeHaskell: Show autocomplete",
-    "keys": ["("],
-    "command": "sublime_haskell_complete",
-    "args":
-    {
-      "characters": "("
-    },
-    "context":
-    [
-      {
-        "key": "is_haskell_source"
-      },
-      {
-        "key": "auto_completion_popup"
-      },
-      {
-        "key": "is_import_completion"
-      }
-    ]
-  },
-  {
-    "caption": "SublimeHaskell: Next error",
-    "keys": ["alt+h", "alt+j"],
-    "command": "sublime_haskell_next_error",
-    "context":
-    [
-      {
-        "key": "is_haskell_source"
-      }
-    ]
-  },
-  {
-    "caption": "SublimeHaskell: Previous error",
-    "keys": ["alt+h", "alt+p"],
-    "command": "sublime_haskell_previous_error",
-    "context":
-    [
-      {
-        "key": "is_haskell_source"
-      }
-    ]
-  },
-  {
-    "caption": "SublimeHaskell: Show error checker",
-    "keys": ["alt+h", "alt+e"],
-    "command": "show_panel",
-    "args":
-    {
-      "panel": "output.haskell_error_checker"
+      "search_type": "string"
     }
   },
 
@@ -579,9 +264,4 @@
       "file": "config/Python/Main.sublime-menu"
     }
   }
-
-  // ---------------------------------------------------------------------------
-  // -- Sublimerge Pro --
-  // ---------------------------------------------------------------------------
-
 ]
