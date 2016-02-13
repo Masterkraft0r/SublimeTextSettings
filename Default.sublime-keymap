@@ -1,0 +1,267 @@
+[
+  // ---------------------------------------------------------------------------
+  // -- SublimeText2 --
+  // ---------------------------------------------------------------------------
+
+  // -- Selection --
+  {
+    "caption": "SublimeText: Extend selection to current line",
+    "keys": ["super+l"],
+    "command": "expand_selection",
+    "args": {"to": "line"}
+  },
+  {
+    "caption": "SublimeText: Extend selection to current scope",
+    "keys": ["super+s"],
+    "command": "expand_selection",
+    "args": {"to": "scope"}
+  },
+  {
+    "caption": "SublimeText: Extend selection to current brackets",
+    "keys": ["super+b"],
+    "command": "expand_selection",
+    "args": {"to": "brackets"}
+  },
+  {
+    "caption": "SublimeText: Extend selection to current indentation block",
+    "keys": ["super+i"],
+    "command": "expand_selection",
+    "args": {"to": "indentation"}
+  },
+  {
+    "caption": "SublimeText: Extend selection to current word",
+    "keys": ["super+w"],
+    "command": "expand_selection",
+    "args": {"to": "word"}
+  },
+  {
+    "caption": "SublimeText: Toggle sublime text console",
+    "keys": ["alt+s", "alt+c"],
+    "command": "show_panel",
+    "args": {"panel": "console", "toggle": true}
+  },
+  {
+    "caption": "SublimeText: Toggle side bar",
+    "keys": ["alt+s", "alt+s"],
+    "command": "toggle_side_bar"
+  },
+  {
+    "caption": "SublimeText: Toggle minimap",
+    "keys": ["alt+s", "alt+m"],
+    "command": "toggle_minimap"
+  },
+  {
+    "caption": "SublimeText: Toggle comment",
+    "keys": ["alt+c"],
+    "command": "toggle_comment",
+    "args": {"block": false}
+  },
+
+  // ---------------------------------------------------------------------------
+  // -- Package Control --
+  // ---------------------------------------------------------------------------
+
+  {
+    "caption": "Package Control: Install package",
+    "keys": ["alt+p", "alt+i"],
+    "command": "install_package"
+  },
+  {
+    "caption": "Package Control: Remove package",
+    "keys": ["alt+p", "alt+r"],
+    "command": "remove_package"
+  },
+  {
+    "caption": "Package Control: List packages",
+    "keys": ["alt+p", "alt+l"],
+    "command": "list_packages"
+  },
+  {
+    "caption": "Package Control: Upgrade all packages",
+    "keys": ["alt+p", "alt+u"],
+    "command": "upgrade_all_packages"
+  },
+
+  // ---------------------------------------------------------------------------
+  // -- Filter Lines --
+  // ---------------------------------------------------------------------------
+
+  {
+    "caption": "Filter Lines: Filter With Regex",
+    "keys": ["alt+g", "alt+r"],
+    "command": "prompt_filter_to_lines",
+    "args":
+    {
+      "search_type": "regex"
+    }
+  },
+  {
+    "caption": "Filter Lines: Filter With String",
+    "keys": ["alt+g", "alt+s"],
+    "command": "prompt_filter_to_lines",
+    "args":
+    {
+      "search_type": "string"
+    }
+  },
+  {
+    "caption": "Filter Lines: Fold With Regex",
+    "keys": ["alt+f", "alt+r"],
+    "command": "prompt_fold_to_lines",
+    "args":
+    {
+      "search_type": "regex"
+    }
+  },
+  {
+    "caption": "Filter Lines: Fold With String",
+    "keys": ["alt+f", "alt+s"],
+    "command": "prompt_fold_to_lines",
+    "args":
+    {
+      "search_type": "string"
+    }
+  },
+
+  // ---------------------------------------------------------------------------
+  // -- SublimeREPL --
+  // ---------------------------------------------------------------------------
+
+  {
+    "caption": "SublimeREPL: Evaluate current line/selection in active REPL",
+    "keys": ["alt+r", "alt+e"],
+    "command": "repl_transfer_current",
+    "args":
+    {
+      "scope": "selection"
+    },
+    "context":
+    [
+      {
+        "key": "selection_empty",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
+  },
+  {
+    "keys": ["alt+r", "alt+e"],
+    "command": "repl_transfer_current",
+    "args":
+    {
+      "scope": "lines"
+    },
+    "context":
+    [
+      {
+        "key": "selection_empty",
+        "operator": "equal",
+        "operand": false
+      }
+    ]
+  },
+  {
+    "caption": "SublimeREPL: Transfer current line/selection in active REPL",
+    "keys": ["alt+r", "alt+t"],
+    "command": "repl_transfer_current",
+    "args":
+    {
+      "scope": "selection",
+      "action":"view_write"
+    },
+    "context":
+    [
+      {
+        "key": "selection_empty",
+        "operator": "equal",
+        "operand": false
+      }
+    ]
+  },
+  {
+    "keys": ["alt+r", "alt+t"],
+    "command": "repl_transfer_current",
+    "args":
+    {
+      "scope": "lines",
+      "action":"view_write"
+    },
+    "context":
+    [
+      {
+        "key": "selection_empty",
+        "operator": "equal",
+        "operand": true
+      }
+    ]
+  },
+  {
+    "caption": "SublimeREPL: Open GHCi in REPL",
+    "keys": ["alt+r", "alt+h"],
+    "command": "run_existing_window_command",
+    "args":
+    {
+      "id": "repl_haskell",
+      "file": "config/Haskell/Main.sublime-menu"
+    }
+  },
+  {
+    "caption": "SublimeREPL: Open Shell in REPL",
+    "keys": ["alt+r", "alt+s"],
+    "command": "run_existing_window_command",
+    "args":
+    {
+      "id": "repl_shell",
+      "file": "config/Shell/Main.sublime-menu"
+    }
+  },
+  {
+    "caption": "SublimeREPL: Open Octave in REPL",
+    "keys": ["alt+r", "alt+o", "alt+o"],
+    "command": "run_existing_window_command",
+    "args":
+    {
+      "id": "repl_octave",
+      "file": "config/Octave/Main.sublime-menu"
+    }
+  },
+  {
+    "caption": "SublimeREPL: Open Python shell in REPL",
+    "keys": ["alt+r", "alt+p", "alt+p"],
+    "command": "run_existing_window_command",
+    "args":
+    {
+      "id": "repl_python",
+      "file": "config/Python/Main.sublime-menu"
+    }
+  },
+  {
+    "caption": "SublimeREPL: Run current file in Python shell in REPL",
+    "keys": ["alt+r", "alt+p", "alt+r"],
+    "command": "run_existing_window_command", "args":
+    {
+      "id": "repl_python_run",
+      "file": "config/Python/Main.sublime-menu"
+    }
+  },
+  {
+    "caption": "SublimeREPL: Run current file in PDB in REPL",
+    "keys": ["alt+r", "alt+p", "alt+d"],
+    "command": "run_existing_window_command",
+    "args":
+    {
+      "id": "repl_python_pdb",
+      "file": "config/Python/Main.sublime-menu"
+    }
+  },
+  {
+    "caption": "SublimeREPL: Open iPython shell in REPL",
+    "keys": ["alt+r", "alt+p", "alt+i"],
+    "command": "run_existing_window_command",
+    "args":
+    {
+      "id": "repl_python_ipython",
+      "file": "config/Python/Main.sublime-menu"
+    }
+  }
+]
